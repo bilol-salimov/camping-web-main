@@ -1,0 +1,28 @@
+body {
+  font-family: $roboto;
+  color: $color-secondary;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2 {
+  font-family: $archivo;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+input {
+  font-size: 14px;
+  font-family: $roboto;
+  color: $color-gray;
+}

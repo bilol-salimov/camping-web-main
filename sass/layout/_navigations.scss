@@ -1,0 +1,30 @@
+.nav {
+  color: darken($color-white, 20%);
+  .container {
+    @include center(start);
+  }
+  &__logo {
+    background-color: $color-primary;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    @include center;
+    margin-right: 40px;
+  }
+  &__list {
+    @include center(start);
+  }
+  &__item {
+    margin-right: 30px;
+  }
+  &__link {
+    padding: 5px;
+    @include transition(color);
+    &:hover {
+      color: $color-white;
+    }
+  }
+  &__right {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,9 @@
+@mixin center($jc: center, $ai: center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin transition($p: all) {
+  transition: $p .3s ease;
+}
