@@ -14,8 +14,11 @@
   &__text-box {
     text-align: center;
     color: $color-white;
-    width: 40%;
+    width: 50%;
     margin: 250px auto 0 auto;
+    @include responsive(lg-desktop) {
+      width: 70%;
+    }
   }
   &__title {
     font-size: 80px;

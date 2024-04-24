@@ -1,0 +1,47 @@
+.footer {
+  background-color: $color-bg-2;
+  border-radius: 200px 200px 0 0;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  .container {
+    position: relative;
+    .scroll-up {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: $border-radius;
+      background-color: $color-white;
+      @include center;
+      right: 0;
+      top: -130px;
+      @include responsive(lg-desktop) {
+        right: 10%;
+      }
+    }
+  }
+  &__text-box {
+    margin-right: 120px;
+  }
+  &__text {
+    line-height: 28px;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  &__list {
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  .download {
+    width: 100%;
+    img {
+      margin-right: 15px;
+    }
+  }
+  .copy {
+    margin-top: 60px;
+    text-align: center;
+    width: 100%;
+  }
+}

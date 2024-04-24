@@ -7,3 +7,32 @@
 @mixin transition($p: all) {
   transition: $p .3s ease;
 }
+
+// responsive 
+/*
+
+0px - 576px -> mobile
+576px 768px -> tab
+768 - 992px -> desktop
+992px - 1200px -> lg-desktop
+1200px - 1490px -> xl style
+1500px - ... normal style
+*/
+
+@mixin responsive($brp) {
+  @if $brp == mobile {
+    @media (max-width: 576px) { @content }
+  }; 
+  @if $brp == tab {
+    @media (max-width: 768px) { @content }
+  };
+  @if $brp == desktop {
+    @media (max-width: 992px) { @content }
+  }; 
+  @if $brp == lg-desktop {
+    @media (max-width: 1200px) { @content }
+  };  
+  @if $brp == xl-desktop {
+    @media (max-width: 1491px) { @content }
+  } 
+}

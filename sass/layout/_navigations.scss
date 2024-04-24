@@ -9,13 +9,28 @@
     height: 50px;
     border-radius: 50%;
     @include center;
-    margin-right: 40px;
+    margin-right: 45px;
+    @include responsive(xl-desktop) {
+      margin-right: 30px;
+    }
+    @include responsive(lg-desktop) {
+      margin-right: 15px;
+    }
   }
   &__list {
     @include center(start);
+    @include responsive(desktop) {
+      display: none;
+    }
   }
   &__item {
-    margin-right: 30px;
+    margin-right: 35px;
+    @include responsive(xl-desktop) {
+      margin-right: 20px;
+    }
+    @include responsive(lg-desktop) {
+      margin-right: 10px;
+    }
   }
   &__link {
     padding: 5px;
@@ -26,5 +41,8 @@
   }
   &__right {
     margin-left: auto;
+    @include responsive(desktop) {
+      display: none;
+    }
   }
 }
