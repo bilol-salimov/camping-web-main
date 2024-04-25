@@ -1,5 +1,11 @@
 .feature {
   transform: translateY(-35%);
+  @include responsive(lg-desktop) {
+    transform: translateY(-25%);
+  }
+  @include responsive(tab) {
+    transform: translateY(-15%);
+  }
   &__list {
     @include responsive(lg-desktop) {
       grid-template-columns: repeat(2, 1fr);
@@ -12,6 +18,9 @@
 
 .explore {
   margin-top: 50px;
+  @include responsive(tab) {
+    margin-top: 0;
+  }
   text-align: center;
   &__list {
     @include responsive(xl-desktop) {
@@ -34,6 +43,9 @@
     @include responsive(lg-desktop) {
       width: 65%;
     }
+    @include responsive(mobile) {
+      width: 100%;
+    }
   }
   .btn {
     margin-top: 60px;
@@ -42,12 +54,18 @@
 
 .touch {
   margin-top: 150px;
+  @include responsive(mobile) {
+    margin-top: 100px;
+  }
   &__box {
     background-color: $color-bg-2;
     border-radius: $border-radius;
     padding: 80px 100px;
     @include responsive(lg-desktop) {
       padding: 40px 80px;
+    }
+    @include responsive(mobile) {
+      padding: 40px 20px;
     }
     @include center(space-between);
     box-shadow: 5px 10px 30px rgba($color-secondary, .05);
@@ -82,4 +100,7 @@
 
 .footer {
   margin-top: 180px;
+  @include responsive(mobile) {
+    margin-top: 70px;
+  }
 }

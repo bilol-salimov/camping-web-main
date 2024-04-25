@@ -4,6 +4,9 @@
     top: 60px;
     bottom: 250px
   };
+  @include responsive(mobile) {
+    padding-top: 40px;
+  }
   background: {
     image: linear-gradient(to top, rgba($color-secondary, .4), rgba($color-secondary, .4)),
     url("../images/bg-image.jpg");
@@ -17,11 +20,22 @@
     width: 50%;
     margin: 250px auto 0 auto;
     @include responsive(lg-desktop) {
+      margin-top: 150px;
       width: 70%;
+    }
+    @include responsive(tab) {
+      width: 90%;
+      margin: 100px auto 0 auto;
     }
   }
   &__title {
     font-size: 80px;
+    @include responsive(tab) {
+      font-size: 60px;
+    }
+    @include responsive(mobile) {
+      font-size: 45px;
+    }
   }
   &__subtitle {
     margin-top: 35px;

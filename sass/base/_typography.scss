@@ -15,10 +15,19 @@ h1, h2 {
 
 h1 {
   font-size: 40px;
+  @include responsive(desktop) {
+    font-size: 35px;
+  }
+  @include responsive(phone) {
+    font-size: 30px;
+  }
 }
 
 h2 {
   font-size: 18px;
+  @include responsive(desktop) {
+    font-size: 16px;
+  }
 }
 
 button {

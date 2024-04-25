@@ -3,24 +3,25 @@
   border-radius: 200px 200px 0 0;
   padding-top: 100px;
   padding-bottom: 60px;
+  @include responsive(desktop) {
+    border-radius: 150px 150px 0 0;
+  }
+  @include responsive(tab) {
+    border-radius: 100px 100px 0 0;
+  }
   .container {
     position: relative;
-    .scroll-up {
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      border-radius: $border-radius;
-      background-color: $color-white;
-      @include center;
-      right: 0;
-      top: -130px;
-      @include responsive(lg-desktop) {
-        right: 10%;
-      }
+    @include responsive(tab) {
+      grid-template-columns: 1fr;
+      row-gap: 40px;
     }
   }
   &__text-box {
     margin-right: 120px;
+    @include responsive(tab) {
+      margin-right: 0px;
+      width: 100%;
+    }
   }
   &__text {
     line-height: 28px;
